@@ -1,0 +1,164 @@
+:root {
+    --primary-color: #002147;
+    --secondary-color: #FF6F00;
+    --text-light: #ffffff;
+}
+
+.navbar {
+    background-color: var(--primary-color);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+}
+
+.navbar .nav-link {
+    color: var(--text-light);
+}
+
+.navbar .nav-link:hover {
+    color: var(--secondary-color);
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+.hero {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 7rem 7rem 1rem;
+    text-align: center;
+}
+
+h1,
+h2,
+h5 {
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+h1::after,
+h2::after,
+h5::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 5px;
+    background-color: var(--secondary-color);
+    margin: 8px auto 12px;
+    border-radius: 3px;
+}
+
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom {
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btn-custom:hover {
+    background-color: #cc5700;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 20px 0;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+footer:hover {
+    background-color: #001530;
+}
+
+footer a{
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+h2 {
+    color: var(--primary-color);
+}
+
+section:not(:last-of-type)::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar .nav-link.active {
+    color: var(--secondary-color);
+    position: relative;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.btn-custom {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    transform: scale(1.05);
+    background-color: #cc5700;
+}
+
+.card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.card-img-top:hover {
+    transform: scale(1.03);
+}
