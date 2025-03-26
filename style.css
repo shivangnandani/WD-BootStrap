@@ -162,3 +162,7 @@ section:not(:last-of-type)::after {
 .card-img-top:hover {
     transform: scale(1.03);
 }
+
+table thead tr th,table tbody tr td{
+    word-break: break-word;
+}
